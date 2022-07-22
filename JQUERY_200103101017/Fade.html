@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>fade</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("#in").click(function(){
+                    $("#a").fadeIn();
+                    $("#b").fadeIn(1500);
+                    $("#c").fadeIn(3000);
+                });
+               
+                $("#out").click(function(){
+                        $("#a").fadeOut();
+                        $("#b").fadeOut(1500);
+                        $("#c").fadeOut(3000);
+                    });
+                
+                $("#io").click(function(){
+                        $("#a").fadeToggle();
+                        $("#b").fadeToggle(1500);
+                        $("#c").fadeToggle(3000);
+                      });
+                    
+                $("#tog").click(function(){
+                        $("#a").fadeTo("slow", 0.15);
+                        $("#b").fadeTo("slow", 0.4);
+                        $("#c").fadeTo("slow", 0.7);
+                      });
+            
+
+
+            });
+
+        </script>
+        <style>
+            #a,#b,#c{
+                height: 100px;
+                width: 100px; 
+                margin-top:10px ;
+                display: none;
+            }
+            #a{
+                background-color: aqua;
+            }
+            #b{
+                background-color: yellowgreen;
+            }
+            #c{
+                background-color: lightcoral;
+            }
+
+        </style>
+    </head>
+    <body>
+        <pre>
+<button id="in">tap to fade in</button><br>
+
+<button id="out">tap to fade out</button><br>
+
+<button id="io">tap to fade in/out</button><br>
+
+<button id="tog">tap to fade change</button></pre>
+        <div id="a"></div>
+        <div id="b"></div>
+        <div id="c"></div>
+
+    </body>
+</html>

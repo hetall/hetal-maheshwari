@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toogle</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#a").click(function(){
+                    $("#b").toggle("slow")
+                });
+
+            });
+            
+        </script>
+        <style>
+            #a,#b{
+                background-color: burlywood;
+                padding: 20px;
+                font-size: large;
+                font-style: italic;
+                border: 3px solid black;
+                text-align: center;
+            }
+            #b{
+                padding: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a">Click to see my name</div>
+        <div id="b">hetal maheshwari</div>
+    </body>
+</html>
