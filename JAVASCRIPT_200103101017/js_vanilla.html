@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vanilla-javascript</title>
+        <script>
+            function DemoInternalAlert(){
+                alert('Hey therre. This is alert message.');
+            }
+            function DemoInternalConfirm(){
+                if(confirm('Are you sure?')){
+                    alert('Yes');
+                }
+                else{
+                    alert('No');
+                }
+            }
+            function DemoInternalPrompt(){
+                var fname=prompt("enter your first name");
+
+                if(fname=='burhan'){
+                    alert('you are burhan');
+                }
+                else{
+                    alert('you are not burhan');
+                }
+            }
+            function BodyBGRed(){
+                document.body.style.backgroundColor="Red";
+            }
+            function DivBGGreen(){
+                document.getElementById("d1").style.backgroundColor="Green";
+            }
+            function ChangeBodyDynamically(){
+                document.body.style.backgroundColor=prompt('enter color name..');
+            }
+            function ChangeDivDynamically(){
+                document.getElementById("d1").style.backgroundColor=prompt('enter color name..');
+            }
+            function bodyBGCP1(){
+				document.body.style.backgroundColor=document.getElementById("CP1").value;
+			}
+			function divBGCP2(){
+				document.getElementById("d1").style.backgroundColor=document.getElementById("CP2").value;
+			}
+
+        </script>
+        <style>
+            #d1{
+                background-color: aqua;
+                height: 300px;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1"></div><hr>
+        <pre><input type="button" value="Alert-Inline" onclick="alert('Hey there. This in alert message.')">      <input type="button" value="Confirm-Inline" onclick="confirm('Hey there. Are you sure?')">      <input type="button" value="prompt-Inline" onclick="prompt('Hey there.What,s your name?')"></pre><hr>
+        <pre><input type="button" value="Alert-Internal" onclick="DemoInternalAlert()">      <input type="button" value="Confirm-Internal" onclick="DemoInternalConfirm()">      <input type="button" value="prompt-Internal" onclick="DemoInternalPrompt()"></pre><hr>
+        <pre><input type="button" value="Body-BG-Red" onclick="BodyBGRed()">      <input type="button" value="div-BG-Green" onclick="DivBGGreen()"></pre><hr>
+        <pre><input type="button" value="Dynamically" onclick="ChangeBodyDynamically()">      <input type="button" value="Dynamically" onclick="ChangeDivDynamically()"> </pre><hr>
+        <pre><input type="color" id="CP1" onchange="bodyBGCP1()" />      <input type="color" id="CP2" onchange="divBGCP2()" /></pre>
+    </body>
+</html>
